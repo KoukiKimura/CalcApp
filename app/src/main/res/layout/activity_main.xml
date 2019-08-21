@@ -26,9 +26,11 @@
             android:layout_height="wrap_content"
             android:layout_gravity="end|center"
             android:layout_margin="16dp"
-            app:srcCompat="@drawable/ic_action_plus"
+            app:srcCompat="@drawable/ic_action_plus"/>
 
-    />
+    <View android:layout_width="1dp" android:layout_height="16dp"
+            android:id="@+id/space1"
+            app:layout_anchor="@+id/fab1"    app:layout_anchorGravity="bottom|left"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fab2"
@@ -37,7 +39,11 @@
             android:layout_gravity="bottom|end"
             android:layout_margin="16dp"
             app:srcCompat="@drawable/ic_action_minus"
-            app:layout_anchorGravity="bottom|left" app:layout_anchor="@+id/fab1"/>
+            app:layout_anchorGravity="bottom|left" app:layout_anchor="@+id/space1"/>
+
+    <View android:layout_width="1dp" android:layout_height="16dp"
+            android:id="@+id/space2"
+          app:layout_anchor="@+id/fab2" app:layout_anchorGravity="bottom|left"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fab3"
@@ -46,7 +52,11 @@
             android:layout_gravity="bottom|end"
             android:layout_margin="16dp"
             app:srcCompat="@drawable/ic_action_mul"
-            app:layout_anchorGravity="bottom|left" app:layout_anchor="@+id/fab2"/>
+            app:layout_anchorGravity="bottom|left" app:layout_anchor="@+id/space2"/>
+
+    <View android:layout_width="1dp" android:layout_height="16dp"
+            android:id="@+id/space3"
+            app:layout_anchor="@+id/fab3" app:layout_anchorGravity="bottom|left"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fab4"
@@ -55,6 +65,45 @@
             android:layout_gravity="bottom|end"
             android:layout_margin="16dp"
             app:srcCompat="@drawable/ic_action_div"
-            app:layout_anchorGravity="bottom|left" app:layout_anchor="@+id/fab3"/>
+            app:layout_anchorGravity="bottom|left" app:layout_anchor="@+id/space3"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text1"
+            android:text="右辺 :"
+            android:layout_gravity="left|center"
+            app:layout_anchor="@+id/edit1"
+            app:layout_anchorGravity="center|left"
+            android:textSize="30dp"
+    />
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text2"
+            android:text="左辺 :"
+            android:layout_gravity="left|center"
+            app:layout_anchor="@+id/edit2"
+            app:layout_anchorGravity="left|center"
+            android:textSize="30dp"
+    />
+
+    <EditText
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:id="@+id/edit1"
+            android:layout_gravity="center"
+            android:inputType=""
+    />
+
+    <EditText
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:id="@+id/edit2"
+            app:layout_anchor="@+id/edit1"
+            app:layout_anchorGravity="bottom|center"
+    />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
