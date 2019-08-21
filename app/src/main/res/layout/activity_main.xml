@@ -94,7 +94,7 @@
             android:layout_margin="16dp"
             android:id="@+id/edit1"
             android:layout_gravity="center"
-            android:inputType=""
+            android:inputType="number"
     />
 
     <EditText
@@ -102,6 +102,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|center"
             android:id="@+id/edit2"
+            android:inputType="number"
             app:layout_anchor="@+id/edit1"
             app:layout_anchorGravity="bottom|center"
     />
